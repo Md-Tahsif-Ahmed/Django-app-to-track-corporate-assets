@@ -27,6 +27,10 @@ class DeviceList(generics.ListCreateAPIView):
     queryset = Device.objects.all()
     serializer_class = DeviceSerializer
 
+class DeviceDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
 
     
 
