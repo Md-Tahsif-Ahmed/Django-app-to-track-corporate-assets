@@ -17,8 +17,6 @@ class DeviceSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class AssignmentSerializer(serializers.ModelSerializer):
-    device = DeviceSerializer(read_only=True)
-    employee = EmployeeSerializer(read_only=True)
     class Meta:
         model = Assignment
         fields = '__all__'
