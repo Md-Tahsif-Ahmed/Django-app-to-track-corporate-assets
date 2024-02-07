@@ -14,7 +14,6 @@ class CompanyDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CompanySerializer
 
 # Employee Views
-    
 class EmployeeList(generics.ListCreateAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
@@ -22,6 +21,12 @@ class EmployeeList(generics.ListCreateAPIView):
 class EmployeeDetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
+
+# Device Views
+class DeviceList(generics.ListCreateAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
 
     
 
