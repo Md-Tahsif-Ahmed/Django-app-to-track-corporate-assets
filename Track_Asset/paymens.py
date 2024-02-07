@@ -10,12 +10,10 @@ class PaymentGateway:
             return True
         else:
             return False
-
     def subscribe_user(self, user):
         """
         Placeholder method for subscribing users to a service.
         """
-
         # Simulate subscription
         if user.is_authenticated:
             return True

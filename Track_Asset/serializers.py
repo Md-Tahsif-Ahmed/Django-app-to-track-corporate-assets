@@ -1,6 +1,11 @@
 from .models import Employee, Device, Assignment, Company
 from rest_framework import serializers
 
+# class PhoneCompanySerializer(serializers.ModelSerializer):
+#     class Meta: 
+#         model = PhoneCompany
+#         fields = '__all__'
+
 class CompanySerializer(serializers.ModelSerializer):
     class Meta: 
         model = Company

@@ -12,6 +12,7 @@ urlpatterns = [
     path('assignment/', AssignmentList.as_view(), name='assignment-list'),
     path('assignment/<int:pk>/', AssignmentDetails.as_view(), name='assignment-details'),
     path('swagger-docs/', schema_view),
+    # path('phone-company/', PhoneCompanyList.as_view(), name='phone-comapny-list'),
 
 
 

@@ -1,8 +1,12 @@
-from django.shortcuts import render
-# from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
 from rest_framework import generics
-from .models import Company, Employee, Device, Assignment
-from .serializers import CompanySerializer, EmployeeSerializer, DeviceSerializer, AssignmentSerializer
+from .models import Company, Employee, Device, Assignment 
+from .serializers import CompanySerializer, EmployeeSerializer, DeviceSerializer, AssignmentSerializer 
+
+# PhoneCompany Views
+# class PhoneCompanyList(generics.ListCreateAPIView):
+#     queryset = PhoneCompany.objects.all()
+#     serializer_class = PhoneCompanySerializer
+
 
 # Company views
 class CompanyList(generics.ListCreateAPIView):
