@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import CompanyList, CompanyDetails, EmployeeList, EmployeeDetails, DeviceList, DeviceDetails, AssignmentList, AssignmentDetails
-
+from rest_framework.schemas import get_schema_view
+schema_view = get_schema_view(title = "Asset Tracking API")
 urlpatterns = [
     path('company/', CompanyList.as_view(), name='comapny-list'),
     path('company/<int:pk>/', CompanyDetails.as_view(), name='company-details'),
@@ -10,6 +11,7 @@ urlpatterns = [
     path('device/<int:pk>/', DeviceDetails.as_view(), name='device-details'),
     path('assignment/', AssignmentList.as_view(), name='assignment-list'),
     path('assignment/<int:pk>/', AssignmentDetails.as_view(), name='assignment-details'),
+    path('swagger-docs/', schema_view),
 
 
 
