@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import CompanyList, CompanyDetails, EmployeeList, EmployeeDetails, DeviceList, DeviceDetails, AssignmentList
-
+from .views import CompanyList, CompanyDetails, EmployeeList, EmployeeDetails, DeviceList, DeviceDetails, AssignmentList, AssignmentDetails
 
 urlpatterns = [
     path('company/', CompanyList.as_view(), name='comapny-list'),
@@ -10,6 +9,8 @@ urlpatterns = [
     path('device/', DeviceList.as_view(), name='device-list'),
     path('device/<int:pk>/', DeviceDetails.as_view(), name='device-details'),
     path('assignment/', AssignmentList.as_view(), name='assignment-list'),
+    path('assignment/<int:pk>/', AssignmentDetails.as_view(), name='assignment-details'),
+
 
 
 
