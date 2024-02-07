@@ -3,6 +3,7 @@ from django.db import models
 # create Company Model
 class Company(models.Model):
     name = models.CharField(max_length=100)
+    
 
 # create Employee Model
 class Employee(models.Model):

@@ -1,9 +1,9 @@
-from .models import Company, Employee, Device, Assignment
+from .models import Employee, Device, Assignment, Company
 from rest_framework import serializers
 
 class CompanySerializer(serializers.ModelSerializer):
     class Meta: 
-        model = Employee
+        model = Company
         fields = '__all__'
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -17,6 +17,8 @@ class DeviceSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class AssignmentSerializer(serializers.ModelSerializer):
+    device = DeviceSerializer(read_only=True)
+    employee = EmployeeSerializer(read_only=True)
     class Meta:
         model = Assignment
         fields = '__all__'
